@@ -1,212 +1,299 @@
 import java.util.Scanner;
 public class Quizstation {
    static Scanner sc = new Scanner(System.in);
-public static void computerScience(){
-        String question[]={ "What is the size of int in Java?",
-                            "Which keyword is used to inherit a class in Java?",
-                            " Which of these is not a Java primitive type?",
-                            "What is the default value of a boolean variable in Java?",
-                            "Which method is the entry point of a Java program?",
-                            ". Which package contains the Scanner class?",
-                            "Which of these is used to handle exceptions in Java?",
-                            "Which keyword is used to create an object?",
-                            "Which operator is used for comparing two values in Java?",
-                            "Which of these is a loop control structure in Java?"
-                          };
-                                //Decision-making: if, switch
-// Loops: for, while, do-while
-// Branching: break, continue, return
-         String options[][] ={{"1) 8 bits." ,"2) 16 bits.", "3) 32 bits." ,"4) 64 bits"},
-                              {"1) implement.","2) extends.","3) inherits.","4) interface"},
-                              {"1) int.","2) boolean.","3) String.","4) double"},
-                              {"1) true." ,"2) 0." ,"3) false.","4) null."},
-                              {"1) start()." , "2) init().","3) main().","4) run()"},
-                              {"1) java.io.", "2) java.util.","3) java.lang.", "4) java.awt"},
-                              {"1) catch.","2) throw.", "3) try-catch.","4) error"},
-                              {"1) class.", "2) this.", "3) new." , "4) void"},
-                              {"1) =.","2) ==.","3) :=.","4) equals"},
-                              {"1) if.", "2) switch.","3) for." ,"4) break"}
-                              };
-         int answer[]={3,2,3,3,3,2,3,3,2,3 };         
-         int score=0;     
-          
-          for(int i=0;i<question.length;i++)  {
-            System.out.println(question[i]);
-            for(String option : options[i]){
-                System.out.println(option);
-           }
-           System.out.println("Enter you answer");
-           int guess = sc.nextInt();
+public static void computerScience() {
 
-           if(guess==answer[i]){
-            System.out.println("CORECT!");
-            score++;
-
-           }else{
-            System.out.println("WRONG!");
-           }
-          }    
-          System.out.println("Your score is: "+score+" from "+question.length);
-    }
-
-
-public static void ComputerNetwork1()
-{
-String question[] = {
-    "1. What does one-bit parity check detect?",
-    "2. Which of the following is true about even parity?",
-    "3. What is the main limitation of single-bit parity?",
-    "4. CRC is primarily used for:",
-    "5. Which polynomial is used in CRC-16?",
-    "6. What is the minimum Hamming distance required to correct single-bit errors?",
-    "7. 2D parity can detect:",
-    "8. What is the Hamming distance between 1010 and 0011?",
-    "9. Which is better at detecting burst errors?",
-    "10. In CRC, which operation is used for division?",
-     "11. Which of these is true for CRC?",
-    "12. Hamming code can:",
-    "13. What is the minimum Hamming distance for single error detection?",
-    "14. What is the purpose of parity bits in Hamming code?",
-    "15. CRC uses which math basis?",
-    "16. Which error can single parity detect?",
-    "17. Which type of error is hard to detect with parity?",
-    "18. A code with distance d can detect up to:",
-    "19. A code with distance d can correct up to:",
-    "20. 2D parity can detect which error patterns well?"
-};
-
-String options[][] = {
-    {"1) All single-bit errors", "2) All two-bit errors", "3) All odd-number errors", "4) All burst errors"},
-    {"1) Number of 1s is even", "2) Number of 0s is even", "3) Only one 1", "4) Parity bit is always 0"},
-    {"1) Can't detect odd errors", "2) Can't detect even errors", "3) Can't detect multiple errors", "4) Can't detect any errors"},
-    {"1) Error correction", "2) Compression", "3) Error detection", "4) Encryption"},
-    {"1) x^16 + x^12 + x^5 + 1", "2) x^16 + x^15 + 1", "3) x^16 + x^12 + x^5 + x + 1", "4) x^16 + x^14 + 1"},
-    {"1) 1", "2) 2", "3) 3", "4) 4"},
-    {"1) Only single-bit errors", "2) Only double-bit errors", "3) All single-bit and some double-bit", "4) Only burst errors"},
-    {"1) 1", "2) 2", "3) 3", "4) 4"},
-    {"1) Single parity", "2) CRC", "3) Checksum", "4) Even parity"},
-    {"1) AND", "2) OR", "3) XOR", "4) ADD"},
-     {"1) Correct errors", "2) Encrypt data", "3) Detect errors", "4) Compress data"},
-    {"1) Only detect errors", "2) Detect and correct errors", "3) Encrypt data", "4) Compress data"},
-    {"1) 1", "2) 2", "3) 3", "4) 4"},
-    {"1) Data storage", "2) Error detection", "3) Error correction", "4) Both 2 and 3"},
-    {"1) Polynomial division", "2) Addition", "3) Multiplication", "4) Subtraction"},
-    {"1) Odd-bit errors", "2) Even-bit errors", "3) All errors", "4) No errors"},
-    {"1) Single-bit", "2) Even-bit", "3) Odd-bit", "4) Burst"},
-    {"1) d errors", "2) d-1 errors", "3) d-1 bits", "4) d bits"},
-    {"1) (d-1)/2 errors", "2) d/2 errors", "3) floor((d-1)/2) errors", "4) d errors"},
-    {"1) Random single-bit errors", "2) All even-bit errors", "3) Single-bit and some double-bit", "4) Only burst >5 bits"}
-};
-
-int answer[] = {1, 1, 3, 3, 3, 3, 3, 3, 2, 3, 3, 2, 2, 4, 1, 1, 2, 2, 3, 3};
-
-
-
- int score1=0;  
- int score2=0;   
-          
-          for(int i=0;i<question.length;i++)  {
-            System.out.println(question[i]);
-            for(String option : options[i]){
-                System.out.println(option);
-           }
-           System.out.println("Enter you answer");
-           int guess = sc.nextInt();
-           sc.nextLine();
-
-           if(guess==answer[i]){
-            System.out.println("CORECT!");
-            score1++;
-           }else{
-            System.out.println("WRONG!");
-           }
-          }    
-          
-
-          System.out.println("Do you wanna play quiz 2 of Computer Network II");
-          String reply = sc.nextLine().toLowerCase();
-          if(reply.equals("play") || reply.equals("yes") || reply.equals("play again")){
-            ComputerNetwork2();
-            
-            int total= score1+score2;
-            System.out.println("Total Score of Computer Network: "+total+" from 40 questions");
-
-           }else{
-            System.out.println("Your score is: "+score1+" from 20 quetions in Computer Network 1");
-          }   
-    }
-
-
-public static void ComputerNetwork2(){
     String question[] = {
-    "21. What is the primary goal of error detection codes?",
-    "22. Which of these can detect burst errors effectively?",
-    "23. The CRC remainder depends on:",
-    "24. What does 'generator polynomial' mean in CRC?",
-    "25. Hamming distance between 0000 and 1111 is:",
-    "26. In even parity, parity bit ensures:",
-    "27. Which error can Hamming code correct?",
-    "28. Minimum Hamming distance for double error detection?",
-    "29. CRC detects errors by checking:",
-    "30. In 2D parity, parity is computed over:",
-     "31. What does Hamming code add to data bits?",
-    "32. Purpose of parity bits in Hamming code?",
-    "33. Which error is CRC especially good at detecting?",
-    "34. In CRC calculation, which operation is repeatedly used?",
-    "35. What is the CRC remainder when data is error-free?",
-        "36. Which of these has higher error detection capability?",
-    "37. Minimum Hamming distance for correcting 2-bit errors?",
-    "38. One-bit parity fails to detect:",
-    "39. Which of these is used in CRC calculations?",
-    "40. Which layer typically handles error detection in OSI?"
-};
+            "What is the size of int in Java?",
+            "Which keyword is used to inherit a class in Java?",
+            "Which of these is not a Java primitive type?",
+            "What is the default value of a boolean variable in Java?",
+            "Which method is the entry point of a Java program?",
+            "Which package contains the Scanner class?",
+            "Which of these is used to handle exceptions in Java?",
+            "Which keyword is used to create an object?",
+            "Which operator is used for comparing two values in Java?",
+            "Which of these is a loop control structure in Java?"
+    };
 
-String options[][] = {
-    {"1) Compression", "2) Detection of errors", "3) Encryption", "4) Data replication"},
-    {"1) One-bit parity", "2) CRC", "3) Hamming code", "4) None"},
-    {"1) Data and key", "2) Data and generator polynomial", "3) Only key", "4) Only parity bit"},
-    {"1) Divisor in binary division", "2) Quotient in division", "3) Remainder", "4) Data bits"},
-    {"1) 2", "2) 3", "3) 4", "4) 1"},
-    {"1) Odd number of 1s", "2) Even number of 1s", "3) Equal 0s and 1s", "4) All 0s"},
-    {"1) Single-bit error", "2) Double-bit error", "3) All errors", "4) No errors"},
-    {"1) 1", "2) 2", "3) 3", "4) 4"},
-    {"1) Division result", "2) Remainder", "3) Sum of bits", "4) Parity bit"},
-    {"1) Rows only", "2) Columns only", "3) Rows and columns", "4) Neither"},
-     {"1) Nothing", "2) Extra data bits", "3) Redundant parity bits", "4) Encryption key"},
-    {"1) Encrypt data", "2) Detect and correct errors", "3) Compress data", "4) Increase speed"},
-    {"1) Random errors", "2) Single-bit errors", "3) Burst errors", "4) No errors"},
-    {"1) AND", "2) OR", "3) XOR", "4) Addition"},
-    {"1) All 1s", "2) 0", "3) Random bits", "4) 1"},
-    {"1) Single parity", "2) 2D parity", "3) CRC", "4) None"},
-    {"1) 3", "2) 4", "3) 5", "4) 6"},
-    {"1) Single-bit errors", "2) Even-bit errors", "3) Odd-bit errors", "4) Burst errors"},
-    {"1) Polynomial division", "2) Addition", "3) Subtraction", "4) Multiplication"},
-    {"1) Application", "2) Data Link", "3) Transport", "4) Network"}
-};
+    String options[][] = {
+            {"1) 8 bits", "2) 16 bits", "3) 32 bits", "4) 64 bits"},
+            {"1) implement", "2) extends", "3) inherits", "4) interface"},
+            {"1) int", "2) boolean", "3) String", "4) double"},
+            {"1) true", "2) 0", "3) false", "4) null"},
+            {"1) start()", "2) init()", "3) main()", "4) run()"},
+            {"1) java.io", "2) java.util", "3) java.lang", "4) java.awt"},
+            {"1) catch", "2) throw", "3) try-catch", "4) error"},
+            {"1) class", "2) this", "3) new", "4) void"},
+            {"1) =", "2) ==", "3) :=", "4) equals"},
+            {"1) if", "2) switch", "3) for", "4) break"}
+    };
 
-int answer[] = {2, 2, 2, 1, 3, 2, 1, 3, 2, 3, 3, 2, 3, 3, 2, 3, 5, 2, 1, 2};
-int score2=0;     
-          
-          for(int i=0;i<question.length;i++)  {
-            System.out.println(question[i]);
-            for(String option : options[i]){
-                System.out.println(option);
-           }
-           System.out.println("Enter you answer");
-           int guess = sc.nextInt();
-           sc.nextLine();
+    int answer[] = {3, 2, 3, 3, 3, 2, 3, 3, 2, 3};
 
-           if(guess==answer[i]){
-            System.out.println("CORECT!");
-            score2++;
-           }
-           else{
-            System.out.println("WRONG!");
-            System.out.println("Right answer is "+answer[i]);
-            
-           }
-          }      
+    int score = 0;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║      💻 COMPUTER SCIENCE QUIZ        ║");
+    System.out.println("╚══════════════════════════════════════╝");
+
+    for (int i = 0; i < question.length; i++) {
+
+        System.out.println("\n══════════════════════════════════════");
+        System.out.println("❓ Question " + (i + 1) + "/" + question.length);
+        System.out.println("══════════════════════════════════════");
+
+        System.out.println(question[i]);
+
+        for (String option : options[i]) {
+            System.out.println(option);
+        }
+
+        System.out.print("\n👉 Enter Answer: ");
+        int guess = sc.nextInt();
+
+        if (guess == answer[i]) {
+            System.out.println("✅ CORRECT!");
+            score++;
+        } else {
+            System.out.println("❌ WRONG!");
+            System.out.println("💡 Correct Answer: Option " + answer[i]);
+        }
     }
+
+    double percentage = (score * 100.0) / question.length;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║            🎯 RESULT CARD            ║");
+    System.out.println("╠══════════════════════════════════════╣");
+    System.out.println("║ Score      : " + score + "/" + question.length);
+    System.out.printf("║ Percentage : %.2f%%\n", percentage);
+
+    if (percentage >= 80) {
+        System.out.println("║ Grade      : A");
+    } else if (percentage >= 60) {
+        System.out.println("║ Grade      : B");
+    } else if (percentage >= 40) {
+        System.out.println("║ Grade      : C");
+    } else {
+        System.out.println("║ Grade      : D");
+    }
+
+    System.out.println("╚══════════════════════════════════════╝");
+}
+
+
+public static void ComputerNetwork1() {
+
+    String question[] = {
+            "What does one-bit parity check detect?",
+            "Which of the following is true about even parity?",
+            "What is the main limitation of single-bit parity?",
+            "CRC is primarily used for:",
+            "Which polynomial is used in CRC-16?",
+            "What is the minimum Hamming distance required to correct single-bit errors?",
+            "2D parity can detect:",
+            "What is the Hamming distance between 1010 and 0011?",
+            "Which is better at detecting burst errors?",
+            "In CRC, which operation is used for division?",
+            "Which of these is true for CRC?",
+            "Hamming code can:",
+            "What is the minimum Hamming distance for single error detection?",
+            "What is the purpose of parity bits in Hamming code?",
+            "CRC uses which math basis?",
+            "Which error can single parity detect?",
+            "Which type of error is hard to detect with parity?",
+            "A code with distance d can detect up to:",
+            "A code with distance d can correct up to:",
+            "2D parity can detect which error patterns well?"
+    };
+
+    String options[][] = {
+            {"1) All single-bit errors", "2) All two-bit errors", "3) All odd-number errors", "4) All burst errors"},
+            {"1) Number of 1s is even", "2) Number of 0s is even", "3) Only one 1", "4) Parity bit is always 0"},
+            {"1) Can't detect odd errors", "2) Can't detect even errors", "3) Can't detect multiple errors", "4) Can't detect any errors"},
+            {"1) Error correction", "2) Compression", "3) Error detection", "4) Encryption"},
+            {"1) x^16 + x^12 + x^5 + 1", "2) x^16 + x^15 + 1", "3) x^16 + x^12 + x^5 + x + 1", "4) x^16 + x^14 + 1"},
+            {"1) 1", "2) 2", "3) 3", "4) 4"},
+            {"1) Only single-bit errors", "2) Only double-bit errors", "3) All single-bit and some double-bit", "4) Only burst errors"},
+            {"1) 1", "2) 2", "3) 3", "4) 4"},
+            {"1) Single parity", "2) CRC", "3) Checksum", "4) Even parity"},
+            {"1) AND", "2) OR", "3) XOR", "4) ADD"},
+            {"1) Correct errors", "2) Encrypt data", "3) Detect errors", "4) Compress data"},
+            {"1) Only detect errors", "2) Detect and correct errors", "3) Encrypt data", "4) Compress data"},
+            {"1) 1", "2) 2", "3) 3", "4) 4"},
+            {"1) Data storage", "2) Error detection", "3) Error correction", "4) Both 2 and 3"},
+            {"1) Polynomial division", "2) Addition", "3) Multiplication", "4) Subtraction"},
+            {"1) Odd-bit errors", "2) Even-bit errors", "3) All errors", "4) No errors"},
+            {"1) Single-bit", "2) Even-bit", "3) Odd-bit", "4) Burst"},
+            {"1) d errors", "2) d-1 errors", "3) d-1 bits", "4) d bits"},
+            {"1) (d-1)/2 errors", "2) d/2 errors", "3) floor((d-1)/2) errors", "4) d errors"},
+            {"1) Random single-bit errors", "2) All even-bit errors", "3) Single-bit and some double-bit", "4) Only burst >5 bits"}
+    };
+
+    int answer[] = {1, 1, 3, 3, 3, 3, 3, 3, 2, 3, 3, 2, 2, 4, 1, 1, 2, 2, 3, 3};
+
+    int score1 = 0;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║       🌐 COMPUTER NETWORK - I        ║");
+    System.out.println("╚══════════════════════════════════════╝");
+
+    for (int i = 0; i < question.length; i++) {
+
+        System.out.println("\n══════════════════════════════════════");
+        System.out.println("❓ Question " + (i + 1) + "/" + question.length);
+        System.out.println("══════════════════════════════════════");
+
+        System.out.println(question[i]);
+
+        for (String option : options[i]) {
+            System.out.println(option);
+        }
+
+        System.out.print("\n👉 Enter Answer: ");
+        int guess = sc.nextInt();
+
+        if (guess == answer[i]) {
+            System.out.println("✅ CORRECT!");
+            score1++;
+        } else {
+            System.out.println("❌ WRONG!");
+            System.out.println("💡 Correct Answer: Option " + answer[i]);
+        }
+    }
+
+    double percentage = (score1 * 100.0) / question.length;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║           🎯 RESULT CARD             ║");
+    System.out.println("╠══════════════════════════════════════╣");
+    System.out.println("║ Score      : " + score1 + "/" + question.length);
+    System.out.printf("║ Percentage : %.2f%%\n", percentage);
+
+    if (percentage >= 80) {
+        System.out.println("║ Grade      : A");
+    } else if (percentage >= 60) {
+        System.out.println("║ Grade      : B");
+    } else if (percentage >= 40) {
+        System.out.println("║ Grade      : C");
+    } else {
+        System.out.println("║ Grade      : D");
+    }
+
+    System.out.println("╚══════════════════════════════════════╝");
+
+    sc.nextLine();
+
+    System.out.print("\n🚀 Do you want to play Computer Network II? (yes/no): ");
+    String reply = sc.nextLine().toLowerCase();
+
+    if (reply.equals("yes") || reply.equals("play") || reply.equals("play again")) {
+        ComputerNetwork2();
+    }
+}
+
+
+public static void ComputerNetwork2() {
+
+    String question[] = {
+            "What is the primary goal of error detection codes?",
+            "Which of these can detect burst errors effectively?",
+            "The CRC remainder depends on:",
+            "What does 'generator polynomial' mean in CRC?",
+            "Hamming distance between 0000 and 1111 is:",
+            "In even parity, parity bit ensures:",
+            "Which error can Hamming code correct?",
+            "Minimum Hamming distance for double error detection?",
+            "CRC detects errors by checking:",
+            "In 2D parity, parity is computed over:",
+            "What does Hamming code add to data bits?",
+            "Purpose of parity bits in Hamming code?",
+            "Which error is CRC especially good at detecting?",
+            "In CRC calculation, which operation is repeatedly used?",
+            "What is the CRC remainder when data is error-free?",
+            "Which of these has higher error detection capability?",
+            "Minimum Hamming distance for correcting 2-bit errors?",
+            "One-bit parity fails to detect:",
+            "Which of these is used in CRC calculations?",
+            "Which layer typically handles error detection in OSI?"
+    };
+
+    String options[][] = {
+            {"1) Compression", "2) Detection of errors", "3) Encryption", "4) Data replication"},
+            {"1) One-bit parity", "2) CRC", "3) Hamming code", "4) None"},
+            {"1) Data and key", "2) Data and generator polynomial", "3) Only key", "4) Only parity bit"},
+            {"1) Divisor in binary division", "2) Quotient in division", "3) Remainder", "4) Data bits"},
+            {"1) 2", "2) 3", "3) 4", "4) 1"},
+            {"1) Odd number of 1s", "2) Even number of 1s", "3) Equal 0s and 1s", "4) All 0s"},
+            {"1) Single-bit error", "2) Double-bit error", "3) All errors", "4) No errors"},
+            {"1) 1", "2) 2", "3) 3", "4) 4"},
+            {"1) Division result", "2) Remainder", "3) Sum of bits", "4) Parity bit"},
+            {"1) Rows only", "2) Columns only", "3) Rows and columns", "4) Neither"},
+            {"1) Nothing", "2) Extra data bits", "3) Redundant parity bits", "4) Encryption key"},
+            {"1) Encrypt data", "2) Detect and correct errors", "3) Compress data", "4) Increase speed"},
+            {"1) Random errors", "2) Single-bit errors", "3) Burst errors", "4) No errors"},
+            {"1) AND", "2) OR", "3) XOR", "4) Addition"},
+            {"1) All 1s", "2) 0", "3) Random bits", "4) 1"},
+            {"1) Single parity", "2) 2D parity", "3) CRC", "4) None"},
+            {"1) 3", "2) 4", "3) 5", "4) 6"},
+            {"1) Single-bit errors", "2) Even-bit errors", "3) Odd-bit errors", "4) Burst errors"},
+            {"1) Polynomial division", "2) Addition", "3) Subtraction", "4) Multiplication"},
+            {"1) Application", "2) Data Link", "3) Transport", "4) Network"}
+    };
+
+    int answer[] = {2, 2, 2, 1, 3, 2, 1, 3, 2, 3, 3, 2, 3, 3, 2, 3, 3, 2, 1, 2};
+
+    int score2 = 0;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║       🌐 COMPUTER NETWORK - II       ║");
+    System.out.println("╚══════════════════════════════════════╝");
+
+    for (int i = 0; i < question.length; i++) {
+
+        System.out.println("\n══════════════════════════════════════");
+        System.out.println("❓ Question " + (i + 21) + "/40");
+        System.out.println("══════════════════════════════════════");
+
+        System.out.println(question[i]);
+
+        for (String option : options[i]) {
+            System.out.println(option);
+        }
+
+        System.out.print("\n👉 Enter Answer: ");
+        int guess = sc.nextInt();
+
+        if (guess == answer[i]) {
+            System.out.println("✅ CORRECT!");
+            score2++;
+        } else {
+            System.out.println("❌ WRONG!");
+            System.out.println("💡 Correct Answer: Option " + answer[i]);
+        }
+    }
+
+    double percentage = (score2 * 100.0) / question.length;
+
+    System.out.println("\n╔══════════════════════════════════════╗");
+    System.out.println("║           🎯 RESULT CARD             ║");
+    System.out.println("╠══════════════════════════════════════╣");
+    System.out.println("║ Score      : " + score2 + "/" + question.length);
+    System.out.printf("║ Percentage : %.2f%%\n", percentage);
+
+    if (percentage >= 80) {
+        System.out.println("║ Grade      : A");
+    } else if (percentage >= 60) {
+        System.out.println("║ Grade      : B");
+    } else if (percentage >= 40) {
+        System.out.println("║ Grade      : C");
+    } else {
+        System.out.println("║ Grade      : D");
+    }
+
+    System.out.println("╚══════════════════════════════════════╝");
+}
 
 public static void Java() {
     String question[] = {
